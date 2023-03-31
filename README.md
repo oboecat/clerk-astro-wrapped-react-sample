@@ -1,3 +1,7 @@
+# Using Clerk React Components in AstroJS
+
+This is a sample AstoJS app that demonstrates Clerk React components. Because Clerk React components use React context which isn't supported by AstroJS, each component must be separately wrapped in ClerkProvider. This approach is therefore not suitable for addressing cross-cutting concerns.
+
 # Astro Starter Kit: Basics
 
 ```
