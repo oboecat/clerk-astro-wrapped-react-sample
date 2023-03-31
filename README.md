@@ -2,6 +2,13 @@
 
 This is a sample AstoJS app that demonstrates Clerk React components. Because Clerk React components use React context which isn't supported by AstroJS, each component must be separately wrapped in ClerkProvider. This approach is therefore not suitable for addressing cross-cutting concerns.
 
+## Set Up Clerk Environment
+
+Configure your environment with your Clerk publishable API key. Here is an example of your `.env.local` file:
+```
+PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_abc123
+```
+
 # Astro Starter Kit: Basics
 
 ```
