@@ -3,22 +3,25 @@ export interface Props {
 	title: string;
 }
 
+import { ClerkProvider } from "@clerk/clerk-react";
 const { title } = Astro.props;
+
+const clerkPubKey = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8" />
+			<meta name="viewport" content="width=device-width" />
+			<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+			<meta name="generator" content={Astro.generator} />
+			<title>{title}</title>
+		</head>
+		<body>
+			<slot />
+		</body>
+	</html>
 <style is:global>
 	:root {
 		--accent: 124, 58, 237;
